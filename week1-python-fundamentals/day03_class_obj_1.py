@@ -16,11 +16,11 @@ class Student:
 asha = Student("Asha",78)
 rohan = Student("Rohan",35)
 
-#print(asha.name,asha.marks,asha.is_passing())
-#print(rohan.name,rohan.marks,rohan.is_passing())
+print(asha.name,asha.marks,asha.is_passing())
+print(rohan.name,rohan.marks,rohan.is_passing())
 
-#print(asha.is_passing())
-#print(rohan.is_passing())
+print(asha.is_passing())
+print(rohan.is_passing())
 
 
 print(asha.describe())

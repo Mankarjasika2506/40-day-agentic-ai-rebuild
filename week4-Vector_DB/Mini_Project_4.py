@@ -21,8 +21,8 @@ client = chromadb.PersistentClient(path=r"C:\Users\manka\OneDrive\Desktop\CIVIL_
 collection = client.get_collection("civil_guru", embedding_function=MyEmbeddingFunction())  # get the "civil_guru" collection from the ChromaDB client and specify the embedding function to be used for generating embeddings for the documents in this collection
 
 
-results = collection.query(query_texts=["Fundamental Rights"], n_results=3)  # query the "civil_guru" collection for documents related to "Fundamental Rights" and retrieve the top 3 results
-print(results["documents"][0])   # print the first document from the query results, which contains relevant information about "Fundamental Rights"
+#results = collection.query(query_texts=["Fundamental Rights"], n_results=3)  # query the "civil_guru" collection for documents related to "Fundamental Rights" and retrieve the top 3 results
+#print(results["documents"][0])   # print the first document from the query results, which contains relevant information about "Fundamental Rights"
 
 
 llm = ChatOllama(model="llama3.2:3b")   # initialize a ChatOllama language model with the specified model name "llama3.2:3b" for generating responses to user queries
@@ -77,6 +77,7 @@ def run_agent(question):  # function that runs the agent to process a user quest
 
 
 
-print(run_agent("What are the Fundamental Rights in the Indian Constitution?")) 
-print(run_agent("What is today's date?"))
-print(run_agent("What is 100 plus 250?"))
+if __name__ == "__main__":
+    print(run_agent("What are the Fundamental Rights in the Indian Constitution?"))
+    print(run_agent("What is today's date?"))
+    print(run_agent("What is 100 plus 250?"))
